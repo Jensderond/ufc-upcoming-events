@@ -15,7 +15,17 @@ upcoming = soup.find("details", {"id": "events-list-upcoming"})
 
 for upcoming_item in upcoming.find_all("li", {"class": "l-listing__item"}):
     e = Event()
-    upcoming_item_title = upcoming_item.h3.text
+
+    event_number = upcoming_item.find("div", {"class": "c-card-event--result__logo"})
+    event_number = event_number.a["href"]
+    event_number = event_number.split("/")[2]
+    event_number = event_number.split("-")
+    
+    if len(event_number) == 2:
+        upcoming_item_title = f'UFC {event_number[1]}: {upcoming_item.h3.text}'
+    elif len(event_number) > 2 and len(event_number) <= 6:
+        upcoming_item_title = f'UFC {event_number[1]} {event_number[2]}: {upcoming_item.h3.text}'
+
     upcoming_item_date = upcoming_item.find("div", {"class":"c-card-event--result__date"})["data-main-card"]
 
     now = datetime.now()
