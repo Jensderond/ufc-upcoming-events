@@ -1,0 +1,55 @@
+### Git ###
+.git*
+
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+dist/
+eggs/
+.eggs/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Virtualenv
+.venv
+venv/
+ENV/
+
+### Project ###
+# Logs
+logs
+*.log
+log*
+
+# Metafiles
+.editorocnfig
+circle*
+.circle*
