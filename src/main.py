@@ -11,8 +11,6 @@ soup = BeautifulSoup(source, 'lxml')
 
 upcoming = soup.find("details", {"id": "events-list-upcoming"})
 
-# print(upcoming.prettify())
-
 for upcoming_item in upcoming.find_all("li", {"class": "l-listing__item"}):
     e = Event()
 
