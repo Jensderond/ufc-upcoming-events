@@ -3,6 +3,9 @@
   <a href="https://github.com/Jensderond/ufc-upcoming-events/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
   </a>
+  <a href="https://github.com/Jensderond/ufc-upcoming-events/actions">
+    <img alt="Actions Status" src="https://github.com/Jensderond/ufc-upcoming-events/workflows/Build%20Docker%20Image/badge.svg" target="_blank" />
+  </a>
   <a href="https://twitter.com/Jensderond">
     <img alt="Twitter: Jensderond" src="https://img.shields.io/twitter/follow/Jensderond.svg?style=social" target="_blank" />
   </a>
