@@ -25,10 +25,11 @@ for upcoming_item in upcoming.find_all("li", {"class": "l-listing__item"}):
         upcoming_item_title = f'UFC {event_number[1]} {event_number[2]}: {upcoming_item.h3.text}'
 
     upcoming_item_date = upcoming_item.find("div", {"class":"c-card-event--result__date"})["data-main-card"]
+    upcoming_item_date_tz = upcoming_item_date.split(" ")[6]
 
     now = datetime.now()
     # Sat, Oct 26 / 2:00 PM CEST
-    upcoming_item_date = datetime.strptime(now.strftime("%Y") + " " + upcoming_item_date, '%Y %a, %b %d / %I:%M %p CEST')
+    upcoming_item_date = datetime.strptime(now.strftime("%Y") + " " + upcoming_item_date, f'%Y %a, %b %d / %I:%M %p {upcoming_item_date_tz}')
     
     print(upcoming_item_title)
     print(upcoming_item_date)
